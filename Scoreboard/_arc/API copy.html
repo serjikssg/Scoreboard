@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="machine_color.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>eGauge</title>
+</head>
+<body class="bg-light-">
+    <p id="tt">test</p>
+    <div class="container p-3">
+        <div class="row g-2">
+            <div class="col-12 col-lg-12">
+                <div class="alert alert-primary text-center" role="alert">
+                    <h1>API Kirk Containers - Machines:</h1>
+                </div>
+            </div>    
+            <!-- <div class="col-12 col-lg-6">
+                <div class="alert bg-primary">
+                    <h1>eGauge</h1>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    
+    <div class="container p-3 bg-light">    
+
+        <div class="row ">
+
+            <div class="col-6 col-lg-3">
+                <div class="card bg-danger text-center mt-3" id="one" ondblclick="blk()" onclick="mcolor()">
+                    <div class="alert m-0">
+                        <h1 ondblclick="blk()" onclick="mcolor()">1</h1>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-danger text-center mt-3" id="two">
+                    <div class="alert m-0">
+                        <h5 onclick="blk()" >Machine 2</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 3</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 4</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-6 col-lg-3">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 5</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 7</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-danger text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 10</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 11</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-6 col-lg-3">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 12</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 13</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 14</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-danger text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 20</h5>
+                        <h5>12%</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-6 col-lg-3">
+                <div class="card bg-danger text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 21</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-success text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 22</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-danger text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 23</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-lg-3 ">
+                <div class="card bg-danger text-center mt-3">
+                    <div class="alert m-0">
+                        <h5>Machine 24</h5>
+                        <h5>100%</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="{% static 'scoreboard/js/scoreboard.js' %}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'scoreboard/css/style.css' %}">
+    <meta http-equiv="refresh" content="10"> <!-- Refresh every 1 minutes -->
+    <title>Scoreboard</title>
+
+</head>
+
+<body class="bg-light-">
+    <!-- <span onclick="history.back()">&larr;</span> -->
+    <div class="container p-3">
+        <div class="row g-2">
+            <div class="col-12 col-lg-12 badge text-bg-primary" onclick="history.back()">
+                <div class="text-center" role="alert">
+                    <h1>&larr; API Kirk Containers - Machines:</h1>
+                </div>
+            </div>    
+        </div>
+    </div>
+    
+
+    <div class="container p-3 bg-light">    
+        <div class="text-center">
+            <small>update[ Page: {{items.1.6 }} - Database: {{ items.1.5}} ]</small>
+        </div>
+        <div class="row ">
+
+            {% for x in items %}
+              
+                <div class="col-6 col-lg-3">
+                    <a href="{% url 'tag_change' x.0 %}" style="text-decoration:none">
+                        <div class="card  {{ x.1 }} text-center mt-3" id="{{ x.0 }}" style="animation:'ok';">
+                            <div class="alert m-0">
+                                <h1>{{ x.0 }}</h1>
+                                <div class="card-body">
+                                    <!-- <br> -->
+                                    <h4 class="cart-title">{{ x.3 }}%</h4>
+                                    <h4 class="cart-text">{{ x.4 }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% for x in items %}
+        <script defer>
+            console.log("Machine: {{ x.0 }}")
+            blk("{{ x.0 }}", "{{ x.2 }}", "{{ x.4 }}");
+        </script>
+    {% endfor %}
+
+</body>
