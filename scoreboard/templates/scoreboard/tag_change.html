@@ -55,7 +55,11 @@
                             <br><br>
                             <div class='nav navbar'>
                                 <input type="button" class="btn btn-danger btn-lg" value="Cancel" onclick="history.back()" >
+                                {% if user.is_authenticated %}
                                 <input type="submit" class="btn btn-primary btn-lg float-right" value="Save">
+                                {% else %}
+                                <input type="button" class="btn btn-secondary btn-lg float-right" value="Save" onclick="alert('Login required!')">
+                                {% endif %}
                             </div>
                         </h2>
                       </form>
