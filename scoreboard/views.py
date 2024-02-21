@@ -30,6 +30,9 @@ def api2db(request):
 
 def scoreboard(request):
     time_test(request)
+    # root# crontab -e
+    # */2 * * * * /usr/bin/curl http://10.10.20.222/scoreboard/api2db/
+    
     now = datetime.datetime.now()
     ma_list = []
     xx = Scoreboard.objects.filter(display=True)
