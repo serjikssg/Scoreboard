@@ -1,7 +1,8 @@
 function blk (n, b, tag) {
     console.log(n, b, tag)
-    if (b == 0) {
+    if (b == 0) {   // 0 is running
         document.getElementById(n).style.animation='ok';
+        document.querySelector(`[id="${n}"]`).setAttribute('class', 'card text-bg-success text-center mt-3')
     }
     else {
         if(tag == 'Scheduled') {
