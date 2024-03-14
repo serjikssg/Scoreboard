@@ -33,3 +33,4 @@ Displays runtime percentage of manufacturing factory's machines in the last hour
 <hr>
 
 #### Next plan: To create a mobile app to do same. (react native) 
+all good!
